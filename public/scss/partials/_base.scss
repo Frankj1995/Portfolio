@@ -1,0 +1,43 @@
+body {
+  background: $white;
+  color: $gray;
+  font-family: $ff-s;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  @include mq {
+    font-size: 1.125rem;
+  }
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h1 {
+  color: $accent;
+  font-size: 3.125rem;
+  line-height: 1;
+  @include mq {
+    font-size: 4.25rem;
+  }
+
+  span {
+    @include sans-serif($fs: 5.5rem, $color: $accent);
+    display: block;
+  }
+}
+
+h2 {
+  @include sans-serif($fs: 2rem);
+  @include mq {
+    font-size: 3rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,365 @@
+.portfolio {
+  background: $light-grey;
+  padding: 5em 0;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.portfolio-items {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  @include mqw {
+    padding: 0 3em;
+  }
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 50%;
+
+  &.featured {
+    order: -1;
+    flex-basis: 100%;
+  }
+
+  figcaption {
+    background: rgba($accent, .5);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    transition: top ease-in-out 250ms;
+  }
+
+  &:hover figcaption,
+  &focus figcaption {
+    top: 0;
+  }
+}
+
+.item-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-title {
+  color: $white;
+  font-size: 2.5rem;
+  margin-bottom: auto;
+
+  .featured & {
+    font-size: 5rem;
+  }
+}
+
+.portfolio-description {
+  // display: none;
+
+  .featured & {
+    display: block;
+  }
+}
+
+
+
+.portfolio-link {
+  align-self: flex-start;
+  border-bottom: 3px solid $white;
+  color: $white;
+  font-weight: $fw-b;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  &::after {
+    content: url("../images/arrow-white.svg");
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.5em;
+  }
+}
+@supports (display: grid) {
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .featured {
+      grid-column: 1/2;
+      figcaption h2 {
+        font-size: 2.5em;
+        color: $white;
+      }
+      figcaption p {
+        font-size: 1em;
+      }
+    }
+    @include mq {
+      grid-template-columns: repeat(2, 1fr);
+      .featured {
+        grid-column: 1/3;
+        figcaption h2 {
+          font-size: 5em;
+        }
+      }
+    }
+  }
+
+}
+
+
+.portfolio-modal {
+  background: white;
+  box-shadow: 0 0 0.5em 1.9em rgba(black, .1);
+  bottom: 2em;
+  display: none;
+  left: 20%;
+  min-width: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 20%;
+  top: 1em;
+  z-index: 1;
+
+  @include mqw($width: 1160px) {
+    left: 19%;
+    right: 19%;
+  }
+
+  @include mqw($width: 1100px) {
+    left: 17%;
+    right: 17%;
+  }
+
+  @include mqw($width: 1050px) {
+    left: 15%;
+    right: 15%;
+  }
+
+  @include mqw($width: 1000px) {
+    left: 13%;
+    right: 13%;
+  }
+
+  @include mqw($width: 950px) {
+    left: 11%;
+    right: 11%;
+  }
+
+  @include mqw($width: 900px) {
+    left: 9%;
+    right: 9%;
+  }
+
+  @include mqw($width: 850px) {
+    left: 7%;
+    right: 7%;
+  }
+
+  @include mqw($width: 800px) {
+    left: 5%;
+    right: 5%;
+  }
+
+  @include mqw($width: 750px) {
+    left: 3%;
+    right: 3%;
+    min-width: 400px;
+  }
+  &.is-open {
+    display: block;
+  }
+}
+
+.modal-close {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(black, .5);
+  height: 40px;
+  position: fixed;
+  top: 7px;
+  left: 19%;
+  width: 40px;
+
+  @include mqw($width: 1160px) {
+    left: 18%;
+    right: 18%;
+  }
+
+  @include mqw($width: 1100px) {
+    left: 16%;
+    right: 16%;
+  }
+
+  @include mqw($width: 1050px) {
+    left: 14%;
+    right: 14%;
+  }
+
+  @include mqw($width: 1000px) {
+    left: 12%;
+    right: 12%;
+  }
+
+  @include mqw($width: 950px) {
+    left: 9%;
+    right: 9%;
+  }
+
+  @include mqw($width: 900px) {
+    left: 7%;
+    right: 7%;
+  }
+
+  @include mqw($width: 850px) {
+    left: 5%;
+    right: 5%;
+  }
+
+  @include mqw($width: 800px) {
+    left: 3%;
+    right: 3%;
+  }
+
+  @include mqw($width: 750px) {
+    left: 1%;
+    right: 1%;
+  }
+}
+
+.portfolio-header {
+  text-align: left;
+  padding: 5em 0;
+  margin-bottom: 2em;
+}
+
+.port-head {
+  background-size: cover;
+  background-position: center;
+  object-fit: fill;
+}
+
+.port-head-1 {
+  background-image: url("../images/port-images/organiser/top.png");
+}
+
+.port-head-2 {
+  background-image: url("../images/port-images/rocket/top.png");
+}
+
+.port-head-3 {
+  background-image: url("../images/port-images/tdl-home.png");
+}
+
+.port-head-4 {
+  background-image: url("../images/port-images/secrets/home.png");
+}
+
+.port-head-5 {
+  background-image: url("../images/port-images/cms/admin.png");
+}
+
+.portolio-title-box {
+  color: white;
+  background: rgba($accent, .75);
+  padding: 3em 0 3em 3em;
+  width: 70%;
+
+  .portfolio-title {
+    font-size: 3.5rem;
+    display: inline-block;
+
+    &::after {
+      background: white;
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 0.5em 0;
+      width: 100%;
+    }
+  }
+}
+
+.portfolio-subtitle {
+  font-size: 1em;
+}
+
+.portfolio-content {
+  font-size: .8em;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1.5em;
+
+  @include mqw(800px) {
+    font-size: 1em;
+    p {
+      padding: 0 .5em;
+    }
+  }
+}
+
+.portfolio-full-width {
+  height: 10vh;
+  width: 100vw;
+  max-width: initial;
+  margin: 0 -7vw 1em;
+  object-fit: scale-down;
+}
+
+.portfolio-pull-left,
+.portfolio-pull-right {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+@include mq {
+  .portfolio-pull-left {
+    width: 40%;
+    float: left;
+    margin-right: 2em;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .portfolio-pull-right {
+    width: 40%;
+    float: right;
+    margin-left: 2em;
+    padding-bottom: 2em;
+  }
+}
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.video {
+  margin: 5em 0 2em;
+}

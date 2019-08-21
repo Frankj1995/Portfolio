@@ -1,0 +1,89 @@
+button {
+  outline: none;
+}
+
+.carousel {
+  position: relative;
+  height: 400px;
+  width: 90%;
+  margin: 0 auto;
+  top: 10px;
+}
+
+.carousel-width {
+  width: 80%;
+}
+
+.carousel-width {
+  width: 85%;
+}
+
+.carousel__track-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__img {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel__track {
+  height: 100%;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  transition: transform 250ms ease-out;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  background: transparent;
+  border: 0;
+  position: absolute;
+}
+
+.carousel__button--left {
+  font-size: 30px;
+  right: 101%;
+  top: 65%;
+  transform: translateY(-50%);
+}
+
+.carousel__button--right {
+  font-size: 30px;
+  bottom: 35%;
+  left: 101%;
+  transform: translateY(50%);
+}
+
+.carousel__nav {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, .4);
+  margin: 0 12px;
+}
+
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, .8);
+}
+
+.is-hidden {
+  display: none;
+}

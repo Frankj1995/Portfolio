@@ -1,0 +1,411 @@
+<%- include('partials/header'); -%>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#home">home</a>
+      </li>
+      <li>
+        <a href="#about">about</a>
+      </li>
+      <li>
+        <a href="#portfolio">portfolio</a>
+      </li>
+      <li>
+        <a href="#contact">contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-all">
+
+    <div class="welcome" id="home">
+      <button class="menu-button">
+        <svg class="hamburger" x="0px" y="0px" viewBox="0 0 30 17" height="19" width="28">
+          <g transform="translate(-15 -12)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 -6)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+          <g transform="translate(-15 0)">
+            <rect x="15" y="16" class="st0" width="30" height="2" />
+          </g>
+        </svg>
+        <svg class="close-icon" x="0px" y="0px" viewBox="0 0 30 17">
+          <g transform="translate(-15 -15)" height="17" width="30">
+            <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+        		35.8,16.5 37,17.7 	" />
+          </g>
+        </svg>
+
+      </button>
+      <h1>Welcome to my<span>Portfolio</span></h1>
+    </div>
+
+    <section class="intro">
+      <div class="intro-left">
+        <img src="images/welcome-01.png" alt="a laptop on a wood table">
+      </div>
+      <div class="intro-middle">
+        <h2>Hi, I'm Frank.</h2>
+        <p>I am passionate about building interesting and unique web applications, as a full-stack developer with interest in both front and back end development.</p>
+      </div>
+      <div class="intro-right">
+        <img src="images/welcome-02.png" alt="computers on a wooden desk">
+      </div>
+    </section>
+
+    <section class="about-me" id="about">
+      <img class="about-img" src="images/joe-portfolio.png" alt="">
+      <h1 class="about-title">About myself</h1>
+      <h2 class="about-subtitle">Designer & Developer</h2>
+      <div class="about-text">
+        <p>I am a predominantly self taught developer. During my studies, I have taken advantage of
+          online paid courses, as well as from the abundance of free tutorials and courses widely available.
+          I am passionate towards anything programming and development, and wish to take that passion into a career.</p>
+        <p>I first found interest in computer programming during my final year of university. During my music degree, my course included an interactive music media module,
+          and that was where I and created my first game using JavaScript.</p>
+        <p>Since the completion of my degree, I have used many resources in my studies. I have experience with languages such as Java, JavaScript, PHP and Swift,
+          and although I am interested in many aspects of programming, my predominant interest is for web development.</p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h1>My Work</h1>
+      <div class="portfolio-items">
+        <!-- Portfolio Item 1 -->
+        <figure class="portfolio-item port-item-1">
+          <img class="item-img" src="images/port-images/organiser/home.png" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">Organiser</h2>
+            <p class="portfolio-description">Keeps sensitive information organised, and protected.</p>
+            <a href="" class="portfolio-link">More info</a>
+          </figcaption>
+
+          <!-- Portfolio Modal 1 -->
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px" viewBox="0 0 30 17">
+                <g transform="translate(-15 -15)" height="17" width="30">
+                  <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+                  35.8,16.5 37,17.7 	" />
+                </g>
+              </svg>
+            </button>
+            <div class="portfolio-header port-head port-head-1">
+              <div class="portolio-title-box">
+                <h2 class="portfolio-title">Organiser</h2>
+                <p class="portfolio-subtitle">Keeps track of sensitive information, privately and securely.</p>
+              </div> <!-- / portfolio-header -->
+            </div>
+
+            <div class="portfolio-content">
+              <p>I created this website after learning about and creating my first basic API,
+                I wanted to organise and store sensitive information that may be useful to have a record of.
+                Categories used to organise details are credit and debit cards, online accounts,
+                online banking, and bills, information that is highly important, but can be easily forgotten.
+              </p>
+              <p>After registration, you can select from one of four sections on the home page depending on the
+                information you wish to manage. The information is managed via a database, and is viewable on a table.
+                Particularly sensitive information such as card pins and passwords are hidden from immediate sight.
+                Alternatively,  the user can show this information only once after they've input their login details.
+                The same procedure is required when deleting an entry. Created using node.js.
+              </p>
+              <p>If you would like to visit this website, please follow this link: <a class='port-link' href="https://serene-lowlands-48923.herokuapp.com/">Click here</a></p>
+              <div class="carousel">
+                <button class="carousel__button carousel__button--left is-hidden cbl-1"><i class="fas fa-arrow-left"></i></button>
+                <div class=carousel__track-container>
+                  <ul class="carousel__track carousel-track-1">
+                    <li class="carousel__slide current-slide"><img class="carousel__img" src="images/port-images/organiser/home.png" alt="" /></li>
+                    <li class="carousel__slide"><img class="carousel__img" src="images/port-images/organiser/manage-empty.png" alt=""></li>
+                    <li class="carousel__slide"><img class="carousel__img" src="images/port-images/organiser/manage.png" alt="" /></li>
+                    <li class="carousel__slide"><img class="carousel__img" src="images/port-images/organiser/delete.png" alt="" /></li>
+                    <li class="carousel__slide"><img class="carousel__img" src="images/port-images/organiser/show.png" alt="" /></li>
+                    <li class="carousel__slide"><img class="carousel__img" src="images/port-images/organiser/sensitive.png" alt="" /></li>
+                  </ul>
+                </div>
+                <button class="carousel__button carousel__button--right cbr-1"><i class="fas fa-arrow-right r-btn"></i></button>
+                <div class="carousel__nav carousel-nav-1">
+                  <button class="carousel__indicator current-slide"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                </div>
+              </div>
+            </div>
+          </div> <!-- / portfolio-modal-->
+
+        </figure>
+
+        <!-- Portfolio Item 2 -->
+        <figure class="portfolio-item port-item-2">
+          <img class="item-img" src="images/port-images/rocket/welcome.png" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">Interactive Game</h2>
+            <p class="portfolio-description">An interactive musical game.</p>
+            <a href="" class="portfolio-link">More info</a>
+          </figcaption>
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px" viewBox="0 0 30 17">
+                <g transform="translate(-15 -15)" height="17" width="30">
+                  <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+                  35.8,16.5 37,17.7 	" />
+                </g>
+              </svg>
+            </button>
+            <div class="portfolio-header port-head port-head-2">
+              <div class="portolio-title-box">
+                <h2 class="portfolio-title">Interactive Game</h2>
+                <p class="portfolio-description">An interactive musical game.</p>
+              </div> <!-- / portfolio-header -->
+            </div>
+
+            <div class="portfolio-content">
+              <p>I created this project for my Sound for Interactive Media module at my final year at university.
+                Our task was to create an interactive game in which sound was it'core element, to create this I chose
+                to use the JavaScript language with the p5.js library. My inclination to use JavaScript derived from my
+                immediate fascination with programming, and the language itself. </p>
+              <p>My vision for my final project was unclear at first, although I knew by the games end the player should
+                have created a song based on their actions, hence a wave based system of enemies and bosses
+                seemed feasable, and more importantly doable. </p>
+              <p>Their are ten waves, and four bosses in the game. After the defeat of each boss, you are presented with a series of
+                genres, selecting a genre adds a certain instrumental layer to your song. Each boss and wave of enemies get's gradually harder
+                till you reach the final boss. After the final boss is defeated and the final genre is chosen, you observe the song you have made.
+                Additionally, a mixer is present throughout the game in order to manipulate the amplitude of each layer. </p>
+            </div>
+
+            <div class='carousel carousel-width'>
+              <button class="carousel__button carousel__button--left is-hidden cbl-2"><i class="fas fa-arrow-left"></i></button>
+              <div class=carousel__track-container>
+                <ul class="carousel__track carousel-track-2">
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/1.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/2.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/3.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/4.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/5.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/6.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/7.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/8.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/9.png" alt="" /></li>
+                  <li class="carousel__slide current-slide 1"> <img class="carousel__img" src="images/port-images/rocket/10.png" alt="" /></li>
+                </ul>
+              </div>
+              <button class="carousel__button carousel__button--right cbr-2"><i class="fas fa-arrow-right r-btn"></i></button>
+              <div class="carousel__nav carousel-nav-2">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+              </div>
+            </div>
+            <div class="video">
+              <video src="video/game.mov" width="630" height="400" controls>
+              </video>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Portfolio Item 3 -->
+        <figure class="portfolio-item port-item-3">
+          <img class="item-img" src="images/port-images/tdl-home.png" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">To-Do-List</h2>
+            <p class="portfolio-description">Keeps tasks organised, with the ability to catorgorise tasks into lists.</p>
+            <a href="" class="portfolio-link">More info</a>
+          </figcaption>
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px" viewBox="0 0 30 17">
+                <g transform="translate(-15 -15)" height="17" width="30">
+                  <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+                  35.8,16.5 37,17.7 	" />
+                </g>
+              </svg>
+            </button>
+            <div class="portfolio-header port-head port-head-3">
+              <div class="portolio-title-box">
+                <h2 class="portfolio-title">To-Do-List</h2>
+                <p class="portfolio-description">Keeps tasks organised, can catorgorise tasks into lists.</p>
+              </div> <!-- / portfolio-header -->
+            </div>
+            <div class="portfolio-content">
+              <p> This website lets you input tasks to a list of your choice which you can remove when the task is
+                  completed. To create a new list, you just need to type the name you wish for the list into the url. Created using node.js.
+              </p>
+              <p>If you would like to visit this website, please follow this link: <a class='port-link2' href="https://secure-bastion-69138.herokuapp.com/">Click here</a></p>
+            </div>
+
+            <div class='carousel carousel-width'>
+              <button class="carousel__button carousel__button--left is-hidden cbl-3"><i class="fas fa-arrow-left"></i></button>
+              <div class=carousel__track-container>
+                <ul class="carousel__track carousel-track-3">
+                  <li class="carousel__slide current-slide"> <img class="carousel__img" src="images/port-images/tdl-home.png" alt="" /></li>
+                  <li class="carousel__slide"><img class="carousel__img" src="images/port-images/tdl-list.png" alt="" /></li>
+                  <li class="carousel__slide"><img class="carousel__img" src="images/port-images/tdl-work.png" alt=""></li>
+                </ul>
+              </div>
+              <button class="carousel__button carousel__button--right cbr-3"><i class="fas fa-arrow-right r-btn"></i></button>
+              <div class="carousel__nav carousel-nav-3">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+              </div>
+            </div>
+
+          </div> <!-- / portfolio-modal-->
+        </figure>
+
+        <!-- Portfolio Item 4 -->
+        <figure class="portfolio-item port-item-4">
+          <img src="images/port-images/secrets/home.png" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">Secrets</h2>
+            <p class="portfolio-subtitle">Anonymously input secrets, and view secrets from others.</p>
+            <a href="" class="portfolio-link">More info</a>
+          </figcaption>
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px" viewBox="0 0 30 17">
+                <g transform="translate(-15 -15)" height="17" width="30">
+                  <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+                  35.8,16.5 37,17.7 	" />
+                </g>
+              </svg>
+            </button>
+            <div class="portfolio-header port-head port-head-4">
+              <div class="portolio-title-box">
+                <h2 class="portfolio-title">Secrets</h2>
+                <p class="portfolio-subtitle">Anonymously input secrets, and view secrets from others.</p>
+              </div> <!-- / portfolio-header -->
+            </div>
+
+            <div class="portfolio-content">
+
+              <p>After having registered to this website, you can view anonymous secrets from other
+                users and input your own. Created using node.js.</p>
+              <p>If you would like to visit this website, please follow this link: <a class='port-link3' href="https://dry-harbor-25917.herokuapp.com/">Click here</a></p>
+            </div>
+
+            <div class='carousel'>
+              <button class="carousel__button carousel__button--left is-hidden cbl-4"><i class="fas fa-arrow-left"></i></button>
+              <div class=carousel__track-container>
+                <ul class="carousel__track carousel-track-4">
+                  <li class="carousel__slide current-slide"> <img class="carousel__img" src="images/port-images/secrets/home.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/secrets/register.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/secrets/login.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/secrets/secret.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/secrets/submit.png" alt="" /></li>
+                </ul>
+              </div>
+              <button class="carousel__button carousel__button--right cbr-4"><i class="fas fa-arrow-right r-btn"></i></button>
+              <div class="carousel__nav carousel-nav-4">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+              </div>
+            </div>
+          </div> <!-- / portfolio-modal-->
+        </figure>
+
+        <!-- Portfolio Item 5 -->
+        <figure class="portfolio-item port-item-5 featured">
+          <img src="images/port-images/cms/home.png" alt="portfolio item">
+          <figcaption>
+            <h2 class="portfolio-title">Content Management System (Blog)</h2>
+            <p class="portfolio-subtitle">Allows you to upload and views blog posts from registered users.</p>
+            <a href="" class="portfolio-link">More info</a>
+          </figcaption>
+          <div class="portfolio-modal">
+            <button class="modal-close">
+              <svg x="0px" y="0px" viewBox="0 0 30 17">
+                <g transform="translate(-15 -15)" height="17" width="30">
+                  <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3
+                  35.8,16.5 37,17.7 	" />
+                </g>
+              </svg>
+            </button>
+            <div class="portfolio-header port-head port-head-5">
+              <div class="portolio-title-box">
+                <h2 class="portfolio-title">Blog</h2>
+                <p class="portfolio-subtitle">Allows you to upload and views blog posts from registered users.</p>
+              </div> <!-- / portfolio-header -->
+            </div>
+
+            <div class="portfolio-content">
+
+              <p>A content management system that allows you to blog and read other blog posts from registered users.
+                 Additionally holds an admin system which allows you to manage the data from users that contribute to the website,
+                 such as comments, users, categories and posts. Created using PHP.</p>
+              <p>If you would like to visit this website, please follow this link: <a class='port-link4' onclick="window.open('http://www.blogguru.uk/')" href="http://www.blogguru.uk/">Click here</a></p>
+            </div>
+
+            <div class='carousel carousel-width'>
+              <button class="carousel__button carousel__button--left is-hidden cbl-5"><i class="fas fa-arrow-left"></i></button>
+              <div class=carousel__track-container>
+                <ul class="carousel__track ct5 carousel-track-5">
+                  <li class="carousel__slide current-slide"> <img class="carousel__img" src="images/port-images/cms/home.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/comments.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/register.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/forgot_password.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/admin.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/posts.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/edit_post.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/users.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/edit_user.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/categories.png" alt="" /></li>
+                  <li class="carousel__slide"> <img class="carousel__img" src="images/port-images/cms/view_comments.png" alt="" /></li>
+                </ul>
+              </div>
+              <button class="carousel__button carousel__button--right cbr-5"><i class="fas fa-arrow-right r-btn"></i></button>
+              <div class="carousel__nav carousel-nav-5">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+              </div>
+            </div>
+          </div> <!-- / portfolio-modal-->
+        </figure>
+      </div>
+    </section>
+<!--
+    <section class="contact" id="contact">
+      <h1>Contact me</h1>
+      <form action="/" method="post">
+        <label class="name">Name:
+          <input type="text">
+        </label>
+
+        <label class="email">Email:
+          <input type="email">
+        </label>
+
+        <label class="message" message="message">Message:
+          <textarea name="name" id="message"></textarea>
+        </label>
+        <input class="button form-button" type="text" value="SEND">
+      </form>
+    </section> -->
+  </div>
+  <%- include('partials/footer'); -%>

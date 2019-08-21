@@ -1,0 +1,46 @@
+.welcome {
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/header-bg.png");
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+
+  h1 {
+    color: $dark-blue;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2;
+    text-align: center;
+    @include mq {
+      font-size: 3vw;
+    }
+
+    span {
+      @include sans-serif($fs: 5.5rem, $color: $accent);
+      display: block;
+      @include mq {
+        font-size: 10.7vw;
+      }
+    }
+
+    &::after,
+    &::before {
+      background: $dark-blue;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 80%;
+    }
+
+    &::before {
+      margin: 0 auto 2em;
+    }
+
+    &::after {
+      margin: 2em auto 0;
+    }
+  }
+}
